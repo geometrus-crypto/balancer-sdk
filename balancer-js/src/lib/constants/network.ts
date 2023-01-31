@@ -9,4 +9,6 @@ export enum Network {
   GNOSIS = 100,
   POLYGON = 137,
   ARBITRUM = 42161,
+  KLAYTN = 8217,
+  BAOBAB = 1001,
 }

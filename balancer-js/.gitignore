@@ -3,7 +3,6 @@ node_modules
 yarn-error.log
 .DS_Store
 .idea/
-dist/
 src/subgraph/generated/
 cache/
 balancer-js.iml

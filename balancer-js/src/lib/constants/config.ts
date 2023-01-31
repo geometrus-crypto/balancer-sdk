@@ -1,5 +1,5 @@
-import { Network } from './network';
 import { BalancerNetworkConfig } from '@/types';
+import { Network } from './network';
 
 export const balancerVault = '0xBA12222222228d8Ba445958a75a0704d566BF2C8';
 
@@ -71,6 +71,88 @@ export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
     ],
   },
   [Network.POLYGON]: {
+    chainId: Network.POLYGON, //137
+    addresses: {
+      contracts: {
+        vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+        multicall: '0xa1B2b503959aedD81512C37e9dce48164ec6a94d',
+        relayerV3: '0xcf6a66E32dCa0e26AcC3426b851FD8aCbF12Dac7',
+        relayerV4: '0x28A224d9d398a1eBB7BA69BCA515898966Bb1B6b',
+        balancerHelpers: '0x239e55F427D44C3cc793f49bFB507ebe76638a2b',
+        weightedPoolFactory: '0x0e39C3D9b2ec765eFd9c5c70BB290B1fCD8536E3',
+        composableStablePoolFactory:
+          '0x85a80afee867adf27b50bdb7b76da70f1e853062',
+      },
+      tokens: {
+        bal: '0x9a71012b13ca4d3d0cdc72a177df3ef03b0e76a3',
+        wrappedNativeAsset: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+      },
+    },
+    urls: {
+      subgraph:
+        'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-polygon-prune-v2',
+      gaugesSubgraph:
+        'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gauges-polygon',
+      blockNumberSubgraph:
+        'https://api.thegraph.com/subgraphs/name/ianlapham/polygon-blocks',
+    },
+    pools: {},
+    poolsToIgnore: [
+      '0x600bd01b6526611079e12e1ff93aba7a3e34226f', // This pool has rateProviders with incorrect scaling
+    ],
+    sorConnectingTokens: [
+      {
+        symbol: 'weth',
+        address: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+      },
+      {
+        symbol: 'bbrz2',
+        address: '0xe22483774bd8611be2ad2f4194078dac9159f4ba',
+      }, // Joins Stables<>BRZ via https://app.balancer.fi/#/polygon/pool/0x4a0b73f0d13ff6d43e304a174697e3d5cfd310a400020000000000000000091c
+    ],
+  },
+  [Network.KLAYTN]: {
+    chainId: Network.POLYGON, //137
+    addresses: {
+      contracts: {
+        vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+        multicall: '0xa1B2b503959aedD81512C37e9dce48164ec6a94d',
+        relayerV3: '0xcf6a66E32dCa0e26AcC3426b851FD8aCbF12Dac7',
+        relayerV4: '0x28A224d9d398a1eBB7BA69BCA515898966Bb1B6b',
+        balancerHelpers: '0x239e55F427D44C3cc793f49bFB507ebe76638a2b',
+        weightedPoolFactory: '0x0e39C3D9b2ec765eFd9c5c70BB290B1fCD8536E3',
+        composableStablePoolFactory:
+          '0x85a80afee867adf27b50bdb7b76da70f1e853062',
+      },
+      tokens: {
+        bal: '0x9a71012b13ca4d3d0cdc72a177df3ef03b0e76a3',
+        wrappedNativeAsset: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+      },
+    },
+    urls: {
+      subgraph:
+        'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-polygon-prune-v2',
+      gaugesSubgraph:
+        'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gauges-polygon',
+      blockNumberSubgraph:
+        'https://api.thegraph.com/subgraphs/name/ianlapham/polygon-blocks',
+    },
+    pools: {},
+    poolsToIgnore: [
+      '0x600bd01b6526611079e12e1ff93aba7a3e34226f', // This pool has rateProviders with incorrect scaling
+    ],
+    sorConnectingTokens: [
+      {
+        symbol: 'weth',
+        address: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+      },
+      {
+        symbol: 'bbrz2',
+        address: '0xe22483774bd8611be2ad2f4194078dac9159f4ba',
+      }, // Joins Stables<>BRZ via https://app.balancer.fi/#/polygon/pool/0x4a0b73f0d13ff6d43e304a174697e3d5cfd310a400020000000000000000091c
+    ],
+  },
+  [Network.BAOBAB]: {
     chainId: Network.POLYGON, //137
     addresses: {
       contracts: {

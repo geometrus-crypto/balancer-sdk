@@ -112,7 +112,7 @@ export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
     ],
   },
   [Network.KLAYTN]: {
-    chainId: Network.POLYGON, //137
+    chainId: Network.KLAYTN, // 8217
     addresses: {
       contracts: {
         vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
@@ -153,30 +153,27 @@ export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
     ],
   },
   [Network.BAOBAB]: {
-    chainId: Network.POLYGON, //137
+    chainId: Network.BAOBAB, // 1001
     addresses: {
       contracts: {
-        vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
-        multicall: '0xa1B2b503959aedD81512C37e9dce48164ec6a94d',
-        relayerV3: '0xcf6a66E32dCa0e26AcC3426b851FD8aCbF12Dac7',
-        relayerV4: '0x28A224d9d398a1eBB7BA69BCA515898966Bb1B6b',
-        balancerHelpers: '0x239e55F427D44C3cc793f49bFB507ebe76638a2b',
-        weightedPoolFactory: '0x0e39C3D9b2ec765eFd9c5c70BB290B1fCD8536E3',
-        composableStablePoolFactory:
-          '0x85a80afee867adf27b50bdb7b76da70f1e853062',
+        vault: '0x96D6795721B6ffDa88169D031b9FD4Dc26e29578',
+        multicall: '',
+        relayerV3: '',
+        relayerV4: '',
+        balancerHelpers: '',
+        weightedPoolFactory: '0xC9C58BD6c6c1CAc12F8A174670BEC9e4C0924181',
+        composableStablePoolFactory: '',
       },
       tokens: {
-        bal: '0x9a71012b13ca4d3d0cdc72a177df3ef03b0e76a3',
-        wrappedNativeAsset: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+        bal: '0x86443DB7Fb8c6481849eACF278cfc699BD92F478',
+        wrappedNativeAsset: '0x9330dd6713c8328a8d82b14e3f60a0f0b4cc7bfb',
       },
     },
     urls: {
       subgraph:
-        'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-polygon-prune-v2',
-      gaugesSubgraph:
-        'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gauges-polygon',
-      blockNumberSubgraph:
-        'https://api.thegraph.com/subgraphs/name/ianlapham/polygon-blocks',
+        'http://159.89.228.217:8000/subgraphs/name/balancer-labs/balancer-v2',
+      gaugesSubgraph: '',
+      blockNumberSubgraph: '',
     },
     pools: {},
     poolsToIgnore: [
@@ -185,12 +182,8 @@ export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
     sorConnectingTokens: [
       {
         symbol: 'weth',
-        address: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+        address: '0x9330dd6713c8328a8d82b14e3f60a0f0b4cc7bfb',
       },
-      {
-        symbol: 'bbrz2',
-        address: '0xe22483774bd8611be2ad2f4194078dac9159f4ba',
-      }, // Joins Stables<>BRZ via https://app.balancer.fi/#/polygon/pool/0x4a0b73f0d13ff6d43e304a174697e3d5cfd310a400020000000000000000091c
     ],
   },
   [Network.ARBITRUM]: {

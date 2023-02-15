@@ -167,6 +167,30 @@ export const TOKENS_GOERLI: TokenConstants = {
   },
 };
 
+export const TOKENS_BAOBAB: TokenConstants = {
+  Popular: {
+    Symbols: ['tUSDT', 'tKDAI', 'tUSDC', 'KLAY'],
+  },
+  Addresses: {
+    nativeAsset: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
+    wNativeAsset: '0x9330dd6713c8328a8d82b14e3f60a0f0b4cc7bfb',
+    WETH: '0x0000000000000000000000000000000000000000',
+    BAL: '0x0000000000000000000000000000000000000000',
+  },
+};
+
+export const TOKENS_KLAYTN: TokenConstants = {
+  Popular: {
+    Symbols: ['WBTC', 'DAI', 'USDC', 'BAL', 'AAVE', 'WETH'],
+  },
+  Addresses: {
+    nativeAsset: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
+    wNativeAsset: '0x5819b6af194a78511c79c85ea68d2377a7e9335f',
+    WETH: '0x0000000000000000000000000000000000000000',
+    BAL: '0x0000000000000000000000000000000000000000',
+  },
+};
+
 export const TOKENS_GENERIC: TokenConstants = {
   Popular: {
     Symbols: ['WBTC', 'DAI', 'USDC', 'BAL', 'AAVE', 'WETH'],
@@ -186,6 +210,8 @@ export const TOKENS_MAP = {
   [Network.POLYGON]: TOKENS_POLYGON,
   [Network.ARBITRUM]: TOKENS_ARBITRUM,
   [Network.GNOSIS]: TOKENS_GNOSIS,
+  [Network.BAOBAB]: TOKENS_BAOBAB,
+  [Network.KLAYTN]: TOKENS_KLAYTN,
 };
 
 export function TOKENS(networkId: Network): TokenConstants {

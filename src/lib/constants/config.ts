@@ -1,7 +1,8 @@
 import { BalancerNetworkConfig } from '@/types';
 import { Network } from './network';
 
-export const balancerVault = '0xBA12222222228d8Ba445958a75a0704d566BF2C8';
+// TODO: Baobab vault address. Change to support other networks.
+export const balancerVault = '0x96D6795721B6ffDa88169D031b9FD4Dc26e29578';
 
 export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
   [Network.MAINNET]: {
@@ -112,11 +113,11 @@ export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
     ],
   },
   [Network.KLAYTN]: {
-    chainId: Network.KLAYTN, // 8217
+    chainId: Network.KLAYTN, //8217
     addresses: {
       contracts: {
         vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
-        multicall: '0xa1B2b503959aedD81512C37e9dce48164ec6a94d',
+        multicall: '0x5f5f0d1b9ff8b3dcace308e39b13b203354906e9',
         relayerV3: '0xcf6a66E32dCa0e26AcC3426b851FD8aCbF12Dac7',
         relayerV4: '0x28A224d9d398a1eBB7BA69BCA515898966Bb1B6b',
         balancerHelpers: '0x239e55F427D44C3cc793f49bFB507ebe76638a2b',
@@ -153,11 +154,11 @@ export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
     ],
   },
   [Network.BAOBAB]: {
-    chainId: Network.BAOBAB, // 1001
+    chainId: Network.BAOBAB, //1001
     addresses: {
       contracts: {
         vault: '0x96D6795721B6ffDa88169D031b9FD4Dc26e29578',
-        multicall: '',
+        multicall: '0x40643B8Aeaaca0b87Ea1A1E596e64a0e14B1d244',
         relayerV3: '',
         relayerV4: '',
         balancerHelpers: '',

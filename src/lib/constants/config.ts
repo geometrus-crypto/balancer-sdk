@@ -161,7 +161,7 @@ export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
         multicall: '0x40643B8Aeaaca0b87Ea1A1E596e64a0e14B1d244',
         relayerV3: '',
         relayerV4: '',
-        balancerHelpers: '',
+        balancerHelpers: '0x98d1ca6500Fa08cC4415bd1B99b0bb37512f0d69',
         weightedPoolFactory: '0xC9C58BD6c6c1CAc12F8A174670BEC9e4C0924181',
         composableStablePoolFactory: '',
       },

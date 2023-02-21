@@ -6307,7 +6307,7 @@ declare class VeBalProxy {
 type ContractFactory = (address: string, signerOrProvider: Signer | Provider) => Contract;
 interface ContractInstances {
     vault: Vault;
-    balancerHelpers: BalancerHelpers;
+    balancerHelpers?: BalancerHelpers;
     lidoRelayer?: LidoRelayer;
     multicall: Contract;
     relayerV3?: Contract;
@@ -6320,7 +6320,7 @@ interface ContractInstances {
 declare class Contracts {
     contractAddresses: ContractAddresses;
     vault: Vault;
-    balancerHelpers: BalancerHelpers;
+    balancerHelpers?: BalancerHelpers;
     lidoRelayer?: LidoRelayer;
     multicall: Contract;
     relayerV3?: Contract;

@@ -40,7 +40,7 @@ export interface ContractInstances {
 export class Contracts {
   contractAddresses: ContractAddresses;
   vault: Vault;
-  balancerHelpers: BalancerHelpers;
+  balancerHelpers?: BalancerHelpers;
   lidoRelayer?: LidoRelayer;
   multicall: Contract;
   relayerV3?: Contract;

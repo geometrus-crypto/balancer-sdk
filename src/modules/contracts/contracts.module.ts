@@ -26,7 +26,7 @@ type ContractFactory = (
 
 export interface ContractInstances {
   vault: Vault;
-  balancerHelpers: BalancerHelpers;
+  balancerHelpers?: BalancerHelpers;
   lidoRelayer?: LidoRelayer;
   multicall: Contract;
   relayerV3?: Contract;
@@ -66,10 +66,13 @@ export class Contracts {
     }
 
     this.vault = Vault__factory.connect(this.contractAddresses.vault, provider);
-    this.balancerHelpers = BalancerHelpers__factory.connect(
-      this.contractAddresses.balancerHelpers,
-      provider
-    );
+
+    if (this.contractAddresses.balancerHelpers) {
+      this.balancerHelpers = BalancerHelpers__factory.connect(
+        this.contractAddresses.balancerHelpers,
+        provider
+      );
+    }
 
     if (this.contractAddresses.lidoRelayer)
       this.lidoRelayer = LidoRelayer__factory.connect(
